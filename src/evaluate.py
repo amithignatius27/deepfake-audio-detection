@@ -7,7 +7,7 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     model = ResNetAudio().to(device)
-    model.load_state_dict(torch.load("checkpoints/best_model.pth", map_location=device))
+    model.load_state_dict(torch.load("checkpoints/best_model1.pth", map_location=device))
     model.eval()
 
     eval_ds = SpoofDataset("data/eval")
